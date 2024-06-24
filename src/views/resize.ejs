@@ -1,0 +1,25 @@
+<%- include('partials/head', { title: 'Resize' }) -%>
+
+<form method="post" action="/resize" enctype="multipart/form-data">
+  <h1>Resize Your Images</h1>
+
+  <fieldset>
+    <legend>Settings</legend>
+    <div>
+      <label for="size">Max File Size (KB)</label>
+      <br />
+      <input id="size" type="text" name="size" placeholder="Max File Size (KB)" />
+    </div>
+  </fieldset>
+  <br />
+
+  <fieldset>
+    <legend>Add Images</legend>
+    <input id="images" type="file" name="images" accept="image/*" multiple />
+  </fieldset>
+  <br />
+
+  <button type="submit">Submit</button>
+</form>
+
+<%- include('partials/foot') -%>

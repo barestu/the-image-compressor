@@ -1,0 +1,17 @@
+<%- include('partials/head', { title: 'Resize Success' }) -%>
+
+<h1>Resize Success</h1>
+<p>Here are the result</p>
+<fieldset>
+  <legend>Results</legend>
+  <div class="img-results">
+    <% images.forEach(image => { %>
+    <div class="img-wrapper">
+      <img src="<%= image.src %>" width="200" height="200" style="object-fit: cover" />
+      <a href="<%= image.src %>" download="<%= image.filename %>">Download</a>
+    </div>
+    <% }) %>
+  </div>
+</fieldset>
+
+<%- include('partials/foot') -%>
